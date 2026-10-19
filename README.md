@@ -1,24 +1,31 @@
-Passive Reconnaissance & OSINT Lab
-A hands-on cybersecurity lab demonstrating passive reconnaissance techniques used to gather information about a target without direct interaction with its systems.
-Overview
-Passive reconnaissance is the first phase in a typical attack lifecycle, gathering publicly available information (OSINT) about a target before any active scanning or exploitation begins. This lab walks through the tools and techniques a threat actor — or a penetration tester — uses to build a profile of a target domain using only open, public sources.
-Tools & Techniques
-Google Dorking — Advanced search operators (site, inurl, link, related, info) to find subdomains, exposed admin pages, cached content, and third-party connections
-WHOIS — Domain registration lookups for DNS records, IP information, and certificates
-nslookup — CLI queries for MX records and authoritative name servers
-theHarvester — Automated scraping of hosts, IPs, and email addresses from public search engines (Bing, DuckDuckGo)
-Maltego — Visual link analysis to map domains, employees, and email addresses using transforms and machines (e.g., Company Stalker)
-What I Did
-Used Google Dork operators to map subdomains and locate an exposed admin page on the target domain
-Ran WHOIS and nslookup to pull DNS, MX, and name server records
-Used theHarvester to collect hosts, IPs, and email addresses across multiple search engines
-Used Maltego to run DNS/email transforms and a Company Stalker machine to identify employee emails
-Completed a level-1 footprint including DNS enumeration, DNS resolution, and ASN resolution
-Key Takeaways
-A single exposed admin panel, unsanitized input field, or scraped employee list can give an attacker everything needed to move into active reconnaissance
-Organizations should audit what Google indexes about their own domains and restrict public access to admin interfaces
-Employee emails and contact info gathered via OSINT are frequently the foundation of spear-phishing campaigns
-Minimizing public DNS/WHOIS exposure and running regular security awareness training are key defensive controls
-Author
-Saminur Karim
-Cybersecurity Systems, St. John’s University
+🔍 Passive Reconnaissance & OSINT Lab
+Gathering intelligence on a target using only publicly available sources — no direct interaction, no footprint left behind.
+Show Image Show Image Show Image
+</div>
+📖 Overview
+Passive reconnaissance is the act of gathering information about a target without using, notifying, or directly interacting with it. It's typically the first phase of an attack lifecycle — threat actors rely on Open-Source Intelligence (OSINT) to build a profile of a target before moving into active reconnaissance, where systems are actually probed and scanned.
+This lab walks through the tools and techniques used to build that profile using nothing but public, open sources.
+🛠️ Tools & Techniques
+Tool / Technique	Purpose
+Google Dorking	Advanced search operators (site, inurl, link, related, info) to uncover subdomains, exposed admin pages, cached content, and third-party connections
+WHOIS	Domain registration lookups for DNS records, IP info, and certificates
+nslookup	CLI queries for MX records and authoritative name servers
+theHarvester	Automated scraping of hosts, IPs, and email addresses from public search engines
+Maltego	Visual link analysis to map domains, employees, and emails via transforms and machines
+🧭 Walkthrough
+Google Dorking — Used site:, inurl:, link:, related:, and info: operators to map subdomains and locate an exposed admin page on the target domain
+WHOIS & nslookup — Pulled DNS, MX, and authoritative name server records from the CLI and web lookups
+theHarvester — Collected hosts, IPs, and email addresses across Bing and DuckDuckGo
+Maltego — Ran DNS/email transforms and the Company Stalker machine to identify employee emails
+Footprinting — Completed a level-1 footprint: DNS enumeration, DNS resolution, and ASN (Autonomous System Number) resolution
+💡 Key Takeaways
+🔓 A single exposed admin panel, unsanitized input field, or scraped employee list can hand an attacker everything needed to move into active reconnaissance
+🔎 Organizations should regularly audit what Google indexes about their own domains
+🔐 Admin interfaces should be restricted and monitored, not publicly discoverable
+📧 Scraped employee emails are frequently the foundation of spear-phishing campaigns
+🛡️ Minimizing public DNS/WHOIS exposure and running security awareness training are critical defensive controls
+⚠️ Disclaimer
+This lab was conducted in a controlled, educational environment against a sample target domain for coursework purposes only. All techniques shown are for authorized, educational use. Using these methods against systems without explicit permission is illegal.
+👤 Author
+Saminur Karim Cybersecurity Systems @ St. John's University
+LinkedIn Medium GitHub
